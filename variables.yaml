@@ -2,7 +2,7 @@
     name: project-example
     jobs:
       - '{job_type}_{app_name}_{env}':
-            job_type: gsf
+            job_type: Gsf
             app_name: test
             env: UAT
             job_description: 'description of job'
