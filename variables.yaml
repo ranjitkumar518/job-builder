@@ -4,7 +4,7 @@
       - '{job_type}_{app_name}_{env}':
             job_type: Gsf
             app_name: test
-            env: UAT
+            env: DEV
             job_description: 'description of job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             command: df -h
