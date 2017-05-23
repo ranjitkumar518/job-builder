@@ -1,0 +1,12 @@
+- project:
+    name: project-example
+    jobs:
+      - '{job_type}_{app_name}_{env}':
+            job_type: gsf
+            app_name: test
+            env: UAT
+            job_description: 'description of job'
+            giturl: https://github.com/ranjitkumar518/myfirstrepo.git
+            command: df -h
+            server_name: gsf-dev1
+            email_list: ranjitkumar.518@gmail.com
