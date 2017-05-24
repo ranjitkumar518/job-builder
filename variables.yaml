@@ -9,4 +9,4 @@
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             command: df -h
             server_name: gsf-dev1
-            email_list: ranjitkumar.518@gmail.com
+            email_list: $DEFAULT_RECIPIENTS,ranjitkumar.518@gmail.com
