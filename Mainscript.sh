@@ -57,7 +57,7 @@ if [ $env == IT ]; then
       echo "This is a Non GSF IT Job"
       sudo cat $workspace1/variables.yaml > $user_home/NONGSF_IT/variables.yaml
       echo "Job builder is about to create a Nongsf IT job "
-      $jjb_home update $user_home/NONGSF_IT/variables.yaml
+      $jjb_home update $user_home/NONGSF_IT/
    else
       echo "User Input is Invalid"
       exit 1
