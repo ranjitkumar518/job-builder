@@ -2,9 +2,9 @@ env=`grep env variables.yaml |awk -F: '{print $2}'`
 jobtype=`grep job_type variables.yaml |awk -F: '{print $2}'`
 
 # Get Jenkins-Job-Builder Home
-jjb_home="/usr/local/bin/jenkins-jobs"
+jjb_home=/usr/local/bin/jenkins-jobs
 echo $jjb_home $jobtype $env
-user_home="/Users/ranjitkumar/jobs/CI-Jobs" 
+user_home=/Users/ranjitkumar/jobs/CI-Jobs 
 workspace1=/Users/Shared/Jenkins/Home/workspace/job-builder
 
 # comparing variable and execute command to create a job
