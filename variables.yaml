@@ -3,10 +3,10 @@
     jobs:
       - '{job_type}_{app_name}_{env}':
             # Possible Values of job_type are GSF/NONGSF (Not Case Sensitive).
-            job_type: Gsf
+            job_type: nongsf
             app_name: testing1
             # Possible Values of env are DEV/UAT/IT (Not Case Sensitive).
-            env: iT
+            env: dev
             job_description: 'description of  your job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             server_name: gsf-dev1
