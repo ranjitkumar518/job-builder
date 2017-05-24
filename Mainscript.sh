@@ -37,7 +37,7 @@ if [ $env == UAT ]; then
       $jjb_home update $user_home/GSF_UAT/
    elif [ $jobtype == Nongsf ]; then
       echo "This is a Non GSF UAT Job"
-      sudo cat $workspace1/variables.yaml > $user_home/jobs/NONGSF_UAT/variables.yaml
+      sudo cat $workspace1/variables.yaml > $user_home/NONGSF_UAT/variables.yaml
       echo "Job builder is about to create a Nongsf UAT job "
       $jjb_home update $user_home/NONGSF_UAT/
    else
