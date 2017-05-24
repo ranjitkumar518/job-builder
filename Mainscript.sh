@@ -1,3 +1,4 @@
+set -e
 env=`grep env variables.yaml |awk -F: '{print $2}'`
 jobtype=`grep job_type variables.yaml |awk -F: '{print $2}'`
 
