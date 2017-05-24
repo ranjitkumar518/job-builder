@@ -4,7 +4,7 @@
       - '{job_type}_{app_name}_{env}':
             job_type: Nongsf
             app_name: testing
-            env: DEV
+            env: UAT
             job_description: 'description of job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             server_name: gsf-dev1
