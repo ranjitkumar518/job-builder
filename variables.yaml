@@ -2,8 +2,10 @@
     name: project-example
     jobs:
       - '{job_type}_{app_name}_{env}':
+            # Possible Values of job_type are Gsf/Nongsf
             job_type: Nongsf
             app_name: testing
+            # Possible Values of env are DEV/UAT/IT
             env: IT
             job_description: 'description of job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
