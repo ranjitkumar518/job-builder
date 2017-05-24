@@ -48,6 +48,7 @@ if [ $env == IT ]; then
 
    if [ $jobtype == Gsf ]; then
       echo "This is GSF IT Job"
+      echo $workspace
       sudo cat $workspace/$JOB_NAME/variables.yaml >> $user_home/GSF_IT/variables.yaml
       echo "Job builder is about to create a Gsf IT job "
       $jjb_home update $user_home/GSF_IT/
