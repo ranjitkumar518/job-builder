@@ -17,7 +17,7 @@ if [ $env == DEV ]; then
       $jjb_home update $user_home/GSF_DEV/
    elif [ $jobtype == Nongsf ]; then
       echo "This is a Non GSF dev Job"
-      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/NONGSF_DEV/
+      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/NONGSF_DEV/variables.yaml
       echo "Job builder is about to create a Nongsf job "
       $jjb_home update $user_home/NONGSF_DEV/
    else
@@ -35,7 +35,7 @@ if [ $env == UAT ]; then
       $jjb_home update $user_home/GSF_UAT/
    elif [ $jobtype == Nongsf ]; then
       echo "This is a Non GSF UAT Job"
-      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/jobs/CI_Jobs/NONGSF_UAT/
+      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/jobs/CI_Jobs/NONGSF_UAT/variables.yaml
       echo "Job builder is about to create a Nongsf UAT job "
       $jjb_home update $user_home/NONGSF_UAT/
    else
@@ -48,12 +48,12 @@ if [ $env == IT ]; then
 
    if [ $jobtype == Gsf ]; then
       echo "This is GSF IT Job"
-      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/GSF_IT/
+      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/GSF_IT/variables.yaml
       echo "Job builder is about to create a Gsf IT job "
       $jjb_home update $user_home/GSF_IT/
    elif [ $jobtype == Nongsf ]; then
       echo "This is a Non GSF IT Job"
-      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/NONGSF_IT/
+      cat $workspace/$JOB_NAME/variables.yaml >> $user_home/NONGSF_IT/variables.yaml
       echo "Job builder is about to create a Nongsf IT job "
       $jjb_home update $user_home/jobs/NONGSF_IT/
    else
