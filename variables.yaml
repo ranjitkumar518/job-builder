@@ -6,7 +6,7 @@
             job_type: Gsf
             app_name: testing1
             # Possible Values of env are DEV/UAT/IT in LowerCase/UpperCase
-            env: iT
+            env: it
             job_description: 'description of job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             server_name: gsf-dev1
