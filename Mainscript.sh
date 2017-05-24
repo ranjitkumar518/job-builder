@@ -1,15 +1,19 @@
+# To Exit on Error
 set -e
+# Grep Inputs from variables.yaml file 
 env=`grep env variables.yaml |awk -F: '{print $2}'`
 jobtype=`grep job_type variables.yaml |awk -F: '{print $2}'`
 
 # Get Jenkins-Job-Builder Home
 jjb_home=/usr/local/bin/jenkins-jobs
+# print values
 echo $jjb_home $jobtype $env
+# common variables to reuse in the script
 user_home=/Users/ranjitkumar/jobs/CI-Jobs 
 workspace1=/Users/Shared/Jenkins/Home/workspace/job-builder
 
-# comparing variable and execute command to create a job
-
+# Comparing variables job_type and env to create a job by executing a command command
+# Comparing with DEV Environment
 if [ $env == DEV ]; then
 
    if [ $jobtype == Gsf ]; then
@@ -28,6 +32,8 @@ if [ $env == DEV ]; then
    fi
 fi
 
+# Comparing with UAT Environment
+
 if [ $env == UAT ]; then
 
    if [ $jobtype == Gsf ]; then
@@ -45,6 +51,8 @@ if [ $env == UAT ]; then
       exit 1
    fi
 fi
+
+# Comparing with IT Environment
 
 if [ $env == IT ]; then
 
