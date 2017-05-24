@@ -12,7 +12,7 @@ if [ $env == DEV ]; then
 
    if [ $jobtype == Gsf ]; then
       echo "This is GSF dev job"
-      mv $workspace/variables.yaml $user_home/GSF_DEV/variables.yaml
+      cp $workspace/variables.yaml $user_home/GSF_DEV/variables.yaml
       echo "Job builder is about to create a Gsf DEV job "
       $jjb_home update $user_home/GSF_DEV/
    elif [ $jobtype == Nongsf ]; then
