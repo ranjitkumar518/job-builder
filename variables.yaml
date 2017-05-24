@@ -3,7 +3,7 @@
     jobs:
       - '{job_type}_{app_name}_{env}':
             job_type: Gsf
-            app_name: test
+            app_name: testing
             env: IT
             job_description: 'description of job'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
