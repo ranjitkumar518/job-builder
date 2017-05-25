@@ -1,7 +1,7 @@
 - project:
     name: project-upen
     jobs:
-      - {app_name}_{env}':
+      - '{app_name}_{env}':
             # Possible Values of job_type are GSF/NONGSF (Not Case Sensitive).
             type: nongsf
             app_name: testing-ranjith
