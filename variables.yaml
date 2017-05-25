@@ -1,13 +1,14 @@
 - project:
     name: project-upen
     jobs:
-      - '{job_type}_{app_name}_{env}':
+      - {app_name}_{env}':
             # Possible Values of job_type are GSF/NONGSF (Not Case Sensitive).
-            job_type: nongsf
+            type: {job_type}
             app_name: testing-ranjith
             # Possible Values of env are DEV/UAT/IT (Not Case Sensitive).
             env: uat
             job_description: 'job ccreated as per sarvanan and swadebesh description'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
-            server_name: gsf-dev1
+            # Possible values ar 1,2,3,4,5,6
+            server_number: 1
             email_list: $DEFAULT_RECIPIENTS,ranjitkumar.518@gmail.com
