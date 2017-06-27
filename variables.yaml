@@ -3,7 +3,7 @@
     jobs:
       - '{app_name}_{env}':
             # Possible Values of job_type are GSF/NONGSF (Not Case Sensitive).
-            job_type: gsf
+            job_type: nongsf
             app_name: testing-ranjith
             # Possible Values of env are DEV/UAT/IT (Not Case Sensitive).
             env: dev
