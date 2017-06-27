@@ -6,7 +6,7 @@
             job_type: gsf
             app_name: testing-ranjith
             # Possible Values of env are DEV/UAT/IT (Not Case Sensitive).
-            env: dev
+            env: uat
             job_description: 'job ccreated as per sarvanan and swadebesh description'
             giturl: https://github.com/ranjitkumar518/myfirstrepo.git
             # Possible values ar 1,2,3,4,5,6
