@@ -1,0 +1,39 @@
+#- job-template:
+- job:
+    name: 'fresh'
+    description: 'fresh maven job'
+    project-type: maven
+    parameters:
+      - string:
+         name: branch
+         default: master
+         description: "Branch Selector"
+    scm:
+      - git:
+          url: https://github.com/ranjitkumar518/myfirstrepo.git
+          branches:
+            - '${branch}'
+          credentials-id: "8e33cb7a-f49a-4b0b-a49b-e5b9ef55a3e9"
+    maven:
+       maven-name: maven-3.5.0
+       root-pom: pom.xml
+       goals: clean package -Dmaven.test.skip=true -Pgsf2-app
+       maven-opts: -Xms1024m  -XX:PermSize=512m
+       java-opts:
+         - "-Xms512m -Xmx1024m"
+         - "-XX:PermSize=128m -XX:MaxPermSize=256m"
+    prebuilders:
+         - trigger-builds:
+             - project: "default_job"
+               block: true
+    postbuilders:
+         - conditional-step:
+              condition-kind: current-status
+              condition-worst: SUCCESS
+              condition-best: SUCCESS
+              steps:
+               - trigger-builds:
+                  - project: "Deploy_Dev"
+                    block: true
+                    predefined-parameters:
+                      "job=${JOB_NAME}\nserver=abc-dev5\nartifactName=abc_2"
