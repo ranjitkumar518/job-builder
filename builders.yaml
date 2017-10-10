@@ -1,0 +1,42 @@
+- job:
+    name: 'gsf_dev_job'
+    project-type: freestyle
+    description: "https://cst.apple.com/tkt.do?tkt=RITM000046533 - iTracker 2: CI Set-up for GSF in GBIPORTAL-DEV"
+    builders:
+        - maven-builder:
+           name: maven-3.2.1
+           pom: pom.xml
+           goals: clean package -Dmaven.test.skip=true -Pgsf2-app
+           maven-opts: -Xms1024m  -XX:PermSize=512m
+           aggregatorStyleBuild: true
+           incrementalBuild: false
+           ignoreUpstremChanges: true
+           ignoreUnsuccessfulUpstreams: false
+           archivingDisabled: false
+           siteArchivingDisabled: false
+           fingerprintingDisabled: false
+           resolveDependencies: false
+           processPlugins: false
+           mavenValidationLevel: "-1"
+           runHeadless: false
+           disableTriggerDownstreamProjects: false
+           blockTriggerWhenBuilding: true
+           post-step-run-condition: SUCCESS
+           mark-unstable-if-failed: false
+           # settings: defaultsettingsprovider
+           globalsettings: default
+           workspace: ~
+#    builders:
+        - conditional-step:
+           condition-kind: current-status
+           condition-worst: SUCCESS
+           condition-best: SUCCESS
+           steps:
+             - trigger-builds:
+                - project: "DeployGSF2_UAT"
+                  block: true
+                  predefined-parameters:
+                    "job=${JOB_NAME}\nserver=gsf-dev5\nartifactName=itracker2"
+                  block-thresholds:
+                    build-step-failure-threshold: FAILURE
+                    unstable-threshold: never
