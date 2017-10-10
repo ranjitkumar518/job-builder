@@ -1,0 +1,10 @@
+logrotate:
+        daysToKeep: 30
+        numToKeep: 10
+        artifactDaysToKeep: -1
+        artifactNumToKeep: -1
+publishers:
+       - email:
+          recipients: mailid.xyz@gmail.com 
+          notify-every-failed-build: true
+          send-to-individuals: true
