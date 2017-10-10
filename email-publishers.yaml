@@ -4,7 +4,7 @@
            reply-to: $DEFAULT_REPLYTO
            content-type: html
            subject: Build Status of $ææJOB_NAMEåå
-           body: Note:- Incase of failure, please go through the trace to identify the issue. Sonar can fail the build. Please check the project sonar analysis report hosted at https://gbisonar.corp.apple.Øncom for more details. If the build status is either Success or Unstable, deployment is performed. $ææBUILD_FAILURE_ANALYZER, includeTitle=true, includeIndications=true, useHtmlFormat=trueåå$ææJELLY_SCRIPT,Øntemplate="html"åå
+           body: Note:- Incase of failure, please go through the trace to identify the issue. Sonar can fail the build. Please check the project sonar analysis report hosted at https://sonar.corp.xyz.Øncom for more details. If the build status is either Success or Unstable, deployment is performed. $ææBUILD_FAILURE_ANALYZER, includeTitle=true, includeIndications=true, useHtmlFormat=trueåå$ææJELLY_SCRIPT,Øntemplate="html"åå
            presend-script: "$DEFAULT_PRESEND_SCRIPT"
            postsend-script: ~
            attach-build-log: false
