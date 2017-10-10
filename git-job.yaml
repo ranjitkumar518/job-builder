@@ -1,0 +1,25 @@
+- job:
+    name: 'New-job2'
+    project-type: maven
+    description: "Modified job"
+    concurrent: false
+    description: null
+    disabled: false
+    block-downstream: true
+    keep-dependencies: false
+    assign-description: false
+    assign-name: false
+    parameters:
+      - string:
+         name: branch
+         default: master
+         description: "Branch Selector"
+    scm:
+      - git:
+          url: https://github.com/ranjitkumar518/myfirstrepo.git
+          branches:
+            - '${branch}'
+          credentials-id: "8e33cb7a-f49a-4b0b-a49b-e5b9ef55a3e9"
+        # sshredentials-id: "f8a98c44-8f48-4ea3-bf9f-31a01e5eb497"
+          name: ~
+          refspec: ~
