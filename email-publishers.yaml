@@ -1,0 +1,33 @@
+    publishers:
+       - email-ext:
+           recipients: 'æemail_listå'
+           reply-to: $DEFAULT_REPLYTO
+           content-type: html
+           subject: Build Status of $ææJOB_NAMEåå
+           body: Note:- Incase of failure, please go through the trace to identify the issue. Sonar can fail the build. Please check the project sonar analysis report hosted at https://gbisonar.corp.apple.Øncom for more details. If the build status is either Success or Unstable, deployment is performed. $ææBUILD_FAILURE_ANALYZER, includeTitle=true, includeIndications=true, useHtmlFormat=trueåå$ææJELLY_SCRIPT,Øntemplate="html"åå
+           presend-script: "$DEFAULT_PRESEND_SCRIPT"
+           postsend-script: ~
+           attach-build-log: false
+           compress-log: false
+           attachments: ''
+           matrix-trigger: only-configurations
+           save-output: false
+           #unstable: true
+           #first-failure: true
+           #not-built: true
+           #aborted: true
+           #regression: true
+           #second-failure: true
+           #improvement: true
+           #still-failing: true
+           #fixed: true
+           #still-unstable: true
+           #pre-build: true
+           failure: false
+           #success: true
+           always: true
+           send-to:
+             - developers
+              #- requester
+             - culprits
+             - recipients
