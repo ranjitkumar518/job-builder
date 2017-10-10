@@ -1,0 +1,25 @@
+- job:
+    name: 'gsf_dev_job'
+    project-type: freestyle
+    description: "https://cst.apple.com/tkt.do?tkt=RITM000046533 - iTracker 2: CI Set-up for GSF in GBIPORTAL-DEV"
+    concurrent: false
+    disabled: false
+    block-downstream: true
+    keep-dependencies: false
+    assign-description: false
+    assign-name: false
+    jdk: ~
+    parameters:
+      - string:
+         name: branch
+         default: master
+         description: "Branch Selector"
+    scm:
+      - git:
+          url: https://github.com/ranjitkumar518/myfirstrepo.git
+          branches:
+            - '${branch}'
+          credentials-id: "8e33cb7a-f49a-4b0b-a49b-e5b9ef55a3e9"
+        # sshredentials-id: "f8a98c44-8f48-4ea3-bf9f-31a01e5eb497"
+          name: ~
+          refspec: ~
