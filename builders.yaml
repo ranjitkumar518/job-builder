@@ -1,7 +1,7 @@
 - job:
     name: 'gsf_dev_job'
     project-type: freestyle
-    description: "https://cst.apple.com/tkt.do?tkt=RITM000046533 - iTracker 2: CI Set-up for GSF in GBIPORTAL-DEV"
+    description: "CI Set-up for PORTAL-DEV"
     builders:
         - maven-builder:
            name: maven-3.2.1
